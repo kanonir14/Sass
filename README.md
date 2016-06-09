@@ -1,2 +1,2 @@
 # Sass
-Combination of  Sass, OOCSS and ITCSS
+Combination of  Sass, BEM and ITCSS
