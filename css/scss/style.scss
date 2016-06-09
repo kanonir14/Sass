@@ -1,0 +1,31 @@
+//Generic
+//Reset, fonts
+@import "generic.reset";
+@import "generic.fonts";
+
+
+// Settings
+//Настройка переменных и глобальных классов(.container, html, )
+@import "settings.variables";
+@import "settings.global";
+
+//Tools
+//Функции и миксины
+@import "tools.functions";
+@import "tools.mixins";
+
+
+//Elements
+//Селекторы без классов (h1, a, p, strong  e.t.)
+@import "elements.headings";
+@import "elements.links";
+
+//Objects
+//Селлекторы с классами
+@import "objects.wrappers";
+
+//Components
+//Кнопки, навигация, инпуты и т.п.
+@import "components.site-nav";
+@import "components.buttons";
+

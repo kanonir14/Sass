@@ -1,0 +1,52 @@
+// social icon
+.sprite{
+	float: left;
+}
+.social-icon__dribble{
+	background: url('../img/sprite.png');
+	width: 20px;
+	height: 20px;
+}
+
+.social-icon__twitter{
+	background: url('../img/sprite.png') -20px 0px;
+	width: 25px;
+	height: 20px;
+}
+.social-icon__behance{
+	background: url('../img/sprite.png') -45px 0px;
+	width: 20px;
+	height: 20px;
+}
+.social-icon__vimeo{
+	background: url('../img/sprite.png') -65px 0px;
+	width: 20px;
+	height: 20px;
+}
+.social-icon__pinterest{
+	background: url('../img/sprite.png') -85px 0px;
+	width: 20px;
+	height: 20px;
+}
+.hamburger{
+	float: right;
+	background: url('../img/sprite.png') 0px -20px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.social-icon{
+	float: left;
+	
+	li {
+		float: left;
+		margin: 0px 10px;
+	}
+}
+
+.logo{
+	position: absolute;
+	left: 50%;
+	margin-left: -133px;
+}

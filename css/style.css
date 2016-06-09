@@ -1,32 +1,136 @@
-/*
-	
-	Author: Dmitriy Gormash
-	Github: https://github.com/kanonir14
-	Twitter: @kanonir
-	
-*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  background: none;
+  border: 0px;
+}
 
 * {
-	box-sizing: border-box;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent;
-}
-html,body{
-	width: 100%;
-	height: 100%;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-	color: #000;
-	position: relative;
+  box-sizing: border-box;
 }
 
-/*GLOBAL STYLES*/
-.container{
-	margin: auto;
-	width: 1100px;
-	height: auto;
-	overflow: hidden;
+html, body {
+  width: 100%;
+  height: auto;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  background: #e5e5e3 url("../img/bg.jpg") no-repeat center top;
 }
 
+.container {
+  width: 1165px;
+  height: auto;
+  margin: auto;
+}
 
-/*MAIN STYLES*/
+header {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  background: #f7f7f7;
+  padding: 60px 0px;
+}
+
+.sprite {
+  float: left;
+}
+
+.social-icon__dribble {
+  background: url("../img/sprite.png");
+  width: 20px;
+  height: 20px;
+}
+
+.social-icon__twitter {
+  background: url("../img/sprite.png") -20px 0px;
+  width: 25px;
+  height: 20px;
+}
+
+.social-icon__behance {
+  background: url("../img/sprite.png") -45px 0px;
+  width: 20px;
+  height: 20px;
+}
+
+.social-icon__vimeo {
+  background: url("../img/sprite.png") -65px 0px;
+  width: 20px;
+  height: 20px;
+}
+
+.social-icon__pinterest {
+  background: url("../img/sprite.png") -85px 0px;
+  width: 20px;
+  height: 20px;
+}
+
+.hamburger {
+  float: right;
+  background: url("../img/sprite.png") 0px -20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.social-icon {
+  float: left;
+}
+
+.social-icon li {
+  float: left;
+  margin: 0px 10px;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -133px;
+}
