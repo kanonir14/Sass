@@ -99,6 +99,19 @@ header {
   line-height: 24px;
 }
 
+.input, textarea {
+  width: 100%;
+  height: 47px;
+  border: 1px solid #d6d6d6;
+  background: #f2f2f2;
+  clear: both;
+  font-size: 14px;
+  font-style: italic;
+  color: #c0c0c0;
+  padding: 0px 25px;
+  margin-top: 20px;
+}
+
 h3 {
   font-size: 28px;
   font-family: "Kaffeesatz", sans-serif;
@@ -122,6 +135,7 @@ h4 {
   font-family: "ArialNarrowRegular", sans-serif;
   font-size: 18px;
   text-transform: uppercase;
+  text-align: center;
   color: #fff;
   text-decoration: none;
 }
@@ -202,7 +216,26 @@ h4 {
   height: 11px;
   cursor: pointer;
   margin-top: 2px;
-  margin-right: 8px;
+  margin-right: 0px;
+  margin-left: -16px;
+}
+
+.icon--like {
+  background: url("../img/sprite.png") 0px -67px;
+  width: 15px;
+  height: 14px;
+  cursor: pointer;
+  margin-top: 2px;
+  margin-right: 4px;
+}
+
+.icon--comment {
+  background: url("../img/sprite.png") -15px -67px;
+  width: 18px;
+  height: 14px;
+  cursor: pointer;
+  margin-top: 2px;
+  margin-right: 4px;
 }
 
 .social-icon {
@@ -228,6 +261,7 @@ h4 {
 }
 
 .picture-ul li {
+  position: relative;
   border: 4px solid #fff;
   float: left;
   margin-right: 2%;
@@ -241,6 +275,66 @@ h4 {
 
 .picture-ul li img {
   width: 100%;
+}
+
+.picture-ul li:hover .pic-info {
+  display: flex;
+  opacity: 1;
+  -webkit-transition: all, 0.5s, ease-in;
+  -moz-transition: all, 0.5s, ease-in;
+  -o-transition: all, 0.5s, ease-in;
+  transition: all, 0.5s, ease-in;
+}
+
+.picture-ul li:hover .pic-footer {
+  opacity: 1;
+  -webkit-transition: all, 0.5s, ease-in;
+  -moz-transition: all, 0.5s, ease-in;
+  -o-transition: all, 0.5s, ease-in;
+  transition: all, 0.5s, ease-in;
+}
+
+.pic-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  padding: 15px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  -webkit-transition: all, 0.2s, ease-in;
+  -moz-transition: all, 0.2s, ease-in;
+  -o-transition: all, 0.2s, ease-in;
+  transition: all, 0.2s, ease-in;
+}
+
+.picture__info--title {
+  font-weight: bold;
+  display: block;
+}
+
+.picture__text {
+  width: 85%;
+}
+
+.picture__date {
+  text-align: center;
+  width: 15%;
+}
+
+.pic-footer {
+  opacity: 0;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background: #fff;
+  padding: 15px;
 }
 
 .article {
@@ -392,7 +486,9 @@ aside {
 }
 
 .aside-ul li {
+  cursor: pointer;
   margin: 10px 0px;
+  padding-left: 10px;
 }
 
 .aside-ul a {
@@ -405,7 +501,8 @@ aside {
 }
 
 .dropdown-ul {
-  margin-left: 20px;
+  margin-left: 5px;
+  display: none;
 }
 
 .dropdown-ul li a {
@@ -413,9 +510,15 @@ aside {
   font-style: italic;
 }
 
+.main-2 {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
 .main-2__left {
-  width: 565px;
   float: left;
+  width: 565px;
   background: #fff;
   border: 1px solid #d6d6d6;
   padding: 40px 30px;
@@ -438,17 +541,8 @@ aside {
   overflow: hidden;
 }
 
-.form input, .form textarea {
+.form input {
   width: 265px;
-  height: 47px;
-  border: 1px solid #d6d6d6;
-  background: #f2f2f2;
-  clear: both;
-  font-size: 14px;
-  font-style: italic;
-  color: #c0c0c0;
-  padding: 0px 25px;
-  margin-top: 20px;
 }
 
 .form textarea {
@@ -457,4 +551,78 @@ aside {
   padding: 25px;
   font-family: "Arial", sans-serif;
   margin-bottom: 20px;
+}
+
+.main-2__right {
+  width: 565px;
+  float: right;
+  margin-bottom: 65px;
+}
+
+.main-2__logo {
+  display: block;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.block-newsletter {
+  width: 565px;
+  background: #fff;
+  border: 1px solid #d6d6d6;
+  padding: 40px 30px;
+  text-align: center;
+  clear: both;
+}
+
+.block-newsletter h3 {
+  text-align: center;
+}
+
+.block-newsletter input {
+  max-width: 360px;
+  margin: 20px auto;
+  display: block;
+}
+
+.random {
+  height: auto;
+  overflow: hidden;
+}
+
+.item-block {
+  float: left;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  width: 47.5%;
+  background: #fff;
+  border: 1px solid #d6d6d6;
+  padding: 40px 30px;
+}
+
+.item-block:nth-child(2n) {
+  margin-right: 0px;
+}
+
+.item-block h3 {
+  margin-bottom: 15px;
+}
+
+.item-block img {
+  width: 100%;
+  height: auto;
+  border: 4px solid #f0f0f0;
+}
+
+.item-block__descr {
+  font-family: "Kaffeesatz", sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  background: #202020;
+  padding: 60px 0px;
 }

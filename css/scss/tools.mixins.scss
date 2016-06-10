@@ -29,3 +29,9 @@
 	background: #fff;
 	border: 1px solid #d6d6d6;
 }
+
+@mixin main_2 {
+	width: 565px;
+	@include block_bg;
+	padding: 40px 30px;
+}

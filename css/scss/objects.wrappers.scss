@@ -66,7 +66,24 @@
 	height: 11px;
 	cursor: pointer;
 	margin-top: 2px;
-	margin-right: 8px;
+	margin-right: 0px;
+	margin-left: -16px;
+}
+.icon--like{
+	background: url('../img/sprite.png') 0px -67px;
+	width: 15px;
+	height: 14px;
+	cursor: pointer;
+	margin-top: 2px;
+	margin-right: 4px;
+}
+.icon--comment{
+	background: url('../img/sprite.png') -15px -67px;
+	width: 18px;
+	height: 14px;
+	cursor: pointer;
+	margin-top: 2px;
+	margin-right: 4px;
 }
 
 
@@ -92,12 +109,63 @@
 	margin: $mgn-block auto 43px;
 	
 	li {
+		position: relative;
 		border: 4px solid #fff;
 		@include grid(4, 2%);
 		img {
 			width: 100%;
 		}
+		&:hover .pic-info{
+			display: flex;
+			opacity: 1;
+			-webkit-transition: all, 0.5s, ease-in;
+  			-moz-transition: all, 0.5s, ease-in;
+  			-o-transition: all, 0.5s, ease-in;
+  			transition: all, 0.5s, ease-in;
+		}
+		&:hover .pic-footer{
+			opacity: 1;
+			-webkit-transition: all, 0.5s, ease-in;
+  			-moz-transition: all, 0.5s, ease-in;
+  			-o-transition: all, 0.5s, ease-in;
+  			transition: all, 0.5s, ease-in;
+		}
 	}
+}
+.pic-info{
+	@include flex_row(flex-start, nowrap, row);
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	padding: 15px;
+	color: #fff;
+	background: rgba(0,0,0,0.45);
+	opacity: 0;
+	  -webkit-transition: all, 0.2s, ease-in;
+  -moz-transition: all, 0.2s, ease-in;
+  -o-transition: all, 0.2s, ease-in;
+   transition: all, 0.2s, ease-in;
+}
+.picture__info--title{
+	font-weight: bold;
+	display: block;
+}
+.picture__text{
+	width: 85%;
+}
+.picture__date{
+	text-align: center;
+	width: 15%;
+}
+.pic-footer{
+	opacity: 0;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	background: #fff;
+	padding: 15px;
 }
 
 //article
@@ -226,7 +294,9 @@ aside{
 	font-size: 13px;
 
 	li{
+		cursor: pointer;
 		margin: 10px 0px;
+		padding-left: 10px;
 	}
 	a{
 		color: #000;
@@ -238,8 +308,8 @@ aside{
 	}
 }
 .dropdown-ul{
-	margin-left: 20px;
-
+	margin-left: 5px;
+	display: none;
 	li a{
 		color: #e6618c;
 		font-style: italic;
@@ -247,11 +317,12 @@ aside{
 }
 
 //main-2
+.main-2{
+	@include block;
+}
 .main-2__left{
-	width: 565px;
 	float: left;
-	@include block_bg;
-	padding: 40px 30px;
+	@include main_2;
 
 	h3{
 		margin-bottom: 25px;
@@ -268,17 +339,8 @@ aside{
 .form{
 	@include block;
 
-	input, textarea{
+	input{
 		width: 265px;
-		height: 47px;
-		border: 1px solid #d6d6d6;
-		background: #f2f2f2;
-		clear: both;
-		font-size: 14px;
-		font-style: italic;
-		color: #c0c0c0;
-		padding: 0px 25px;
-		margin-top: 20px;
 	}
 	textarea{
 		width: 100%;
@@ -287,4 +349,64 @@ aside{
 		font-family: $font-default;
 		margin-bottom: 20px;
 	}
+}
+
+
+.main-2__right{
+	width: 565px;
+	float: right;
+	margin-bottom: $mgn-block;
+}
+.main-2__logo{
+	display: block;
+	margin: auto;
+	margin-bottom: 5px;
+}
+.block-newsletter{
+	@include main_2;
+	text-align: center;
+	clear: both;
+	
+	h3{
+		text-align: center;
+	}
+
+	input{
+		max-width: 360px;
+		margin: 20px auto;
+		display: block;
+	}
+}
+
+.random{
+	height: auto;
+	overflow: hidden;
+}
+.item-block{
+	@include grid(2, 5%);
+	@include block_bg;
+	padding: 40px 30px;
+	
+	h3{
+		margin-bottom: 15px;
+	}
+
+	img{
+		width: 100%;
+		height: auto;
+		@include border_img;
+	}
+}
+.item-block__descr{
+	font-family: $title-font;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+footer{
+	position: relative;
+	width: 100%;
+	height: 140px;
+	background: $bg-footer;
+	padding: 60px 0px;
 }
