@@ -3,11 +3,13 @@
 }
 
 html, body{
+	position: relative;
 	width: 100%;
 	height: auto;
 	font-family: $text-font;
 	font-size: 16px;
 	background: $bg-color url('../img/bg.jpg') no-repeat center top;
+	overflow-x: hidden;
 }
 
 .container{
@@ -40,4 +42,8 @@ header{
 	color: #c0c0c0;
 	padding: 0px 25px;
 	margin-top: 20px;
+}
+
+button, a{
+	cursor: pointer;
 }
