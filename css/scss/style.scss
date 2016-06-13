@@ -11,12 +11,10 @@
 
 //Tools
 //Функции и миксины
-@import "tools.functions";
 @import "tools.mixins";
 
-
 //Elements
-//Селекторы без классов (h1, a, p, strong  e.t.)
+//Селекторы без классов
 @import "elements.headings";
 @import "elements.links";
 
@@ -28,5 +26,4 @@
 //Components
 //Кнопки, навигация, инпуты и т.п.
 @import "components.site-nav";
-@import "components.buttons";
 

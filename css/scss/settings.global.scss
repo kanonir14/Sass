@@ -42,8 +42,18 @@ header{
 	color: #c0c0c0;
 	padding: 0px 25px;
 	margin-top: 20px;
+	outline: none;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+
+	&:focus{
+		border: 1px solid #020202;
+	}
 }
 
 button, a{
 	cursor: pointer;
+	outline: none;
 }

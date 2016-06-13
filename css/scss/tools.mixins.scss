@@ -15,10 +15,21 @@
 }
 
 @mixin flex_row ($justify, $wrap, $direction) {
-	display: flex;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 	flex-direction:$direction;
+	-webkit-justify-content: $justify;
+	-moz-justify-content: $justify;
+	-o-justify-content: $justify;
 	justify-content: $justify;
+	-webkit-flex-wrap: $wrap;
+	-moz-flex-wrap: $wrap;
+	-o-flex-wrap: $wrap;
 	flex-wrap: $wrap;
+
 }
 
 @mixin border_img{
@@ -35,3 +46,4 @@
 	@include block_bg;
 	padding: 40px 30px;
 }
+

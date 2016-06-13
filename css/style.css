@@ -112,10 +112,20 @@ header {
   color: #c0c0c0;
   padding: 0px 25px;
   margin-top: 20px;
+  outline: none;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.input:focus, textarea:focus {
+  border: 1px solid #020202;
 }
 
 button, a {
   cursor: pointer;
+  outline: none;
 }
 
 h3 {
@@ -144,6 +154,14 @@ h4 {
   text-align: center;
   color: #fff;
   text-decoration: none;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.btn-enter:hover {
+  box-shadow: inset 0px 0px 0px 50px #000;
 }
 
 .sprite {
@@ -301,9 +319,19 @@ h4 {
 }
 
 .pic-info {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -o-justify-content: flex-start;
   justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
   flex-wrap: nowrap;
   position: absolute;
   left: 0px;
@@ -395,9 +423,19 @@ h4 {
 }
 
 .post__flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -o-justify-content: flex-start;
   justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
 
@@ -437,9 +475,19 @@ h4 {
 .post__info {
   width: 165px;
   text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -o-justify-content: flex-start;
   justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
 
@@ -634,6 +682,28 @@ footer {
   padding: 60px 0px;
 }
 
+/*@media (min-width: 768px) and (max-width: 1165px) {
+	.container{
+		width: 100%;
+		padding: 0px 20px;
+	}
+	.article{
+		width: 96%;
+		margin-left: 20px;
+	}
+	.post-list{
+		width: 73%;
+	}
+	aside{
+		width: 25%;
+	}
+	.post__info{
+		display: none;
+	}
+	.post__img img{
+		max-width: 190px;
+	}
+}*/
 .nav-ul {
   width: 250px;
   position: fixed;
